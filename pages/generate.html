@@ -1,0 +1,157 @@
+<html>
+	<head>
+		<link href="../css/bootstrap.css" rel="stylesheet">
+    	<link href="../css/generate.css" rel="stylesheet" type="text/css">
+    	<link href="../css/animate.css" rel="stylesheet" type="text/css">
+    	<link href="../aos/dist/aos.css" rel="stylesheet" type="text/css">
+		
+		
+		<title>GENERATE</title>
+		<link rel="shortcut icon" href="../logotitle.ico" />
+		<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../logo.png">
+		
+		<style>
+			.box{
+			
+				background:#fafafa;
+				box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+				
+			}
+			
+		</style>
+		
+	</head>
+	<body>
+	<div class='overlay'>
+		
+	
+	
+	
+	
+			 <!-- Navigation -->
+				<nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+				  <div class="container">
+					<a class="navbar-brand js-scroll-trigger" href="../index.html">INDIA POST</a>
+					<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+					  Menu
+					  <i class="fa fa-bars"></i>
+					</button>
+					<div class="collapse navbar-collapse" id="navbarResponsive">
+					  <ul class="navbar-nav ml-auto">
+						<li class="nav-item">
+						  <a class="nav-link js-scroll-trigger" href="#download">Admin Login</a>
+						</li>
+					
+					  </ul>
+					</div>
+				  </div>
+				</nav>	
+		<section class="box">
+			<div class="box jumbotron jumbotron-fluid" id="section1" style="margin:0;">
+				  <div class="container">
+						<div id="accordion">
+						  <div class="card">
+							<div class="card-header" id="headingOne">
+							  <h5 class="mb-0">
+								<button class="btn btn-primary btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+								  <p style="font-family:Brandon_reg;font-size: 50px;">GENERATE VIA <span style="font-family:'OpenSans-Bold';">ADDRESS</span></p>
+								</button>
+							  </h5>
+							</div>
+
+							<div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+							  <div class="card-body">
+								<form class="form" action="datafetch.php" method="POST">
+								<div class="row">
+								  <div class="form-group col" style="margin-top:50px">
+									<label for="address">Address</label>
+									<input type="text" class="form-control" name='user_address' id="address" aria-describedby="emailHelp" placeholder="Enter address">
+									<small id="emailHelp" class="form-text text-muted">For eg - Sansad Marg, Janpath, Connaught Place, New Delhi, Delhi.</small>
+								  </div>
+								  
+								  <div class="col"><img src="../codemodel.png" style="margin-top:-30px;height:250px;"></div>
+								  </div>
+								  <div class="d-flex justify-content-around"><button type="submit" class="btn btn-primary">Submit</button></div>
+								</form>
+							  </div>
+							</div>
+						  </div>
+						  <div class="card">
+							<div class="card-header" id="headingTwo">
+							  <h5 class="mb-0">
+								<button class="btn btn-link btn-primary collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+								 <p style="font-family:Brandon_reg;font-size:50px">GENERATE VIA <span style="font-family:'OpenSans-Bold';">MAPS</span></p>
+								</button>
+							  </h5>
+							</div>
+							<div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+							  <div class="card-body">
+								
+							  		<div id="map" style="height:350px"></div>
+								<div class="d-flex justify-content-around" onclick="return myFunction()"</div>
+							  </div>
+							</div>
+						  </div>
+						</div>
+				  </div>
+				  
+			</div>
+		</section>
+		
+		
+			
+	</div>
+		<script>
+		    var marker;
+		    var infowindow;
+		    function myMap() {
+		        var mapCanvas = document.getElementById("map");
+		        var myCenter=new google.maps.LatLng(28.6172,77.2081);
+		        var mapOptions = {
+		            center: myCenter, zoom: 5,
+		            mapTypeId:google.maps.MapTypeId.ROADMAP
+		        };
+		        var map = new google.maps.Map(mapCanvas, mapOptions);
+		        google.maps.event.addListener(map, 'click', function(event) {
+		            placeMarker(map, event.latLng);
+		        });
+		    }
+		    function placeMarker(map, location) {
+		        if (!marker || !marker.setPosition) {
+		            marker = new google.maps.Marker({
+		                position: location,
+		                map: map,
+		            });
+		        } else {
+		            marker.setPosition(location);
+		        }
+		        if (!!infowindow && !!infowindow.close) {
+		            infowindow.close();
+		        }
+		        infowindow = new google.maps.InfoWindow({
+		            content: 'Latitude: ' + location.lat() + '<br>Longitude: ' + location.lng()
+		        });
+		        //infowindow.open(map,marker);
+		        window.location.assign('fetchdata.php?lat='+location.lat()+'&long='+location.lng());
+		    }
+
+		    function myFunction(){
+		    	// body...
+		    	var lat = location.lat();
+		    	var long = location.lng();
+		    	window.location.assign('fetchdata.php?lat='+lat+'&long='+long);
+		    	return false;
+		    }
+		</script>
+
+		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAqjLTpZim6AizPKtJd0RyzOWB6NdISXpg&callback=myMap"></script>
+		<script src="../js/ScrollTrigger.js"></script>
+		<script src="../js/smooth-scroll.js"></script>
+		<script src="../aos/dist/aos.js"></script>
+		<script src="../wow/dist/wow.js"></script>
+		<script src="../js/jquery-3.3.1.min.js"></script>
+	    <script src="../js/bootstrap.min.js"></script>
+	    <script src="../js/app.js" type="text/javascript"></script>
+	
+	</body>
+</html>
