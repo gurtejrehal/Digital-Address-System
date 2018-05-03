@@ -1,0 +1,374 @@
+<html>
+	<head>
+		<link href="css/bootstrap.css" rel="stylesheet">
+    	<link href="css/main2.css" rel="stylesheet" type="text/css">
+    	<link href="css/animate.css" rel="stylesheet" type="text/css">
+    	<link href="aos/dist/aos.css" rel="stylesheet" type="text/css">
+		<link href="css/jquery.fullPage.css" rel="stylesheet" type="text/css">
+		
+		
+		<title>DIGITAL ADDRESSEE SYSTEM</title>
+		<link rel="shortcut icon" href="logotitle.ico" />
+		<link rel="apple-touch-icon-precomposed" sizes="144x144" href="logo.png">
+	</head>
+	<body>
+	
+		
+	
+	
+	
+	 <!-- Navigation -->
+				<nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+				  <div class="container">
+					<a class="navbar-brand js-scroll-trigger" href="#home">INDIA POST</a>
+					<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+					  Menu
+					  <i class="fa fa-bars"></i>
+					</button>
+					<div class="collapse navbar-collapse" id="navbarResponsive">
+					  <ul class="navbar-nav ml-auto">
+						<li class="nav-item">
+						  <a class="nav-link js-scroll-trigger" href="pages/adminlogin.html">Admin Login</a>
+						</li>
+						<li class="nav-item">
+						  <a class="nav-link js-scroll-trigger" href="#guide">Guide</a>
+						</li>
+						<li class="nav-item">
+						  <a class="nav-link js-scroll-trigger" href="#contact">About</a>
+						</li>
+					  </ul>
+					</div>
+				  </div>
+				</nav>
+		
+		<div id="fullpage">
+				
+							<section>
+								<div class="jumbotron jumbotron-fluid" id="section1" style="margin:0;">
+									  <div class="container">
+										<h1 class="display-4" style="font-family:Brandon_blk">INDIA'S FIRST DIGITAL ADDRESSEE SYSTEM</h1>
+										<p class="lead" style="font-size:1.8em;">LET'S GET STARTED</p>
+										<div class="d-flex justify-content-center"><img src="map.png" style="height:200px;widht:200px; margin-bottom:80px;"></div>
+										<div class="d-flex justify-content-around"><a href="pages/generate.html"> <div class="btn btn-orange">GENERATE</div></a>
+										<div class="btn btn-orange" data-toggle="modal" data-target="#exampleModalCenter">VIEW ADDRESS</div>
+										
+											<!--modal -->
+												<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+													  <div class="modal-dialog modal-dialog-centered" role="document">
+														<div class="modal-content">
+														  <div class="modal-header">
+															<h5 class="modal-title" id="exampleModalLongTitle" style="font-family:CalibreWeb-Bold;">GET YOUR ADDRESS</h5>
+															<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+															  <span aria-hidden="true">&times;</span>
+															</button>
+														  </div>
+														  <div class="modal-body">
+															<!--modal content-->
+																<form class="form" action="pages/view.php" method="POST">
+																	  <div class="form-group">
+																		<label for="uniqueaddress"><span style="font-weight:bold;">DIGITAL ADDRESS</span></label>
+																		<input type="text" name="code" class="form-control" id="uniqueaddress" aria-describedby="emailHelp" placeholder="Enter Digital address">
+																		<small id="emailHelp" class="form-text text-muted">For eg - DL 7JWV J6C7 QM</small>
+																	  </div>
+																	 
+																	  
+																	  <a href="pages/view.php"><button type="submit" class="btn btn-primary">Submit</button></a>
+																	</form>
+																
+														  </div>
+														  <div class="modal-footer">
+															<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+										
+														  </div>
+														</div>
+													  </div>
+													</div>
+											
+											<!--end modal-->
+										</div>
+									  </div>
+									  
+								</div>
+							</section>
+				
+				
+							<section>
+								<div class="jumbotron jumbotron-fluid" id="section2" style="margin:0;">
+									  <div class="container">
+											<div class="row">
+												<div class="col">
+													<h3 class="display-4 text-center" style="font-family:CalibreWeb-Bold;">What is INDIA POST</h3>
+													<img class="box static" src="zoomoverlay.jpg" style="height:200px;margin-left:100px;" />
+													<img class="box active" src="zoom.gif" style="height:200px;margin-left:100px;" />
+													
+													<p class="lead text-justify" style="margin:20px;">INDIA POST is a digital property addressing system which ensures that all locations in the country are addressed. With this software, every location has a unique digital address. The digital address is a composite of the state code plus a generated digital code (region, district & area code). The software translates your GPS location to a user friendly digital address. </p>
+												</div>
+												<div class="col">
+													<h3 class="display-4 text-center" style="font-family:CalibreWeb-Bold;">DIGITAL ADDRESS</h3>
+													<img src="codemodel.png" style="height:300px;margin-top:-40px;" />
+													<p class="lead text-justify" style="margin:20px;">
+														The <span style="font-weight:bold;">12 digits</span> address above is for the Sansad Marg, New Delhi, Delhi. In a deconstructed form,7JWV is the unique address within the postal code(approximately 100x100 meters). J6C7 is the unique address within the local region of postal area(approximately 14x14 meters). QM is more accurately describes the local area in 3x3 meters.  The Postal Code and the Unique Address come together to form the unique digital address.
+													</p>
+												</div>
+											</div>
+										</div>
+									  </div>
+								  
+								</div>
+							</section>
+				<section id="guide">
+								<div class="jumbotron jumbotron-fluid">
+								  <div class="container">
+									<div class="row">
+									<div class="col">
+										<h3 class="display-4 text-center" style="font-family:CalibreWeb-Bold;">REGION/DISTRICT CODE GUIDE</h3>
+										<table class="table table-hover">
+											  <thead class="thead-dark">
+												<tr>
+												  <th scope="col">FIRST DIGIT</th>
+												  <th scope="col">REGION</th>
+												  <th scope="col">STATES COVERED</th>
+												  
+												</tr>
+											  </thead>
+											  <tbody>
+												<tr>
+												  <th scope="row">1</th>
+												  <td>NORTHERN</td>
+												  <td>Delhi, Haryana, Punjab, Himachal Pradesh and Jammu & Kashmir</td>
+												  
+												</tr>
+												<tr>
+												  <th scope="row">2</th>
+												  <td>NORTHERN</td>
+												  <td>Uttar Pradesh and Uttaranchal</td>
+												  
+												</tr>
+												<tr>
+												  <th scope="row">3</th>
+												  <td>WESTERN</td>
+												  <td>Rajasthan and Gujarat</td>
+												</tr>
+												
+												<tr>
+												  <th scope="row">4</th>
+												  <td>WESTERN</td>
+												  <td>Maharashtra, Madhya Pradesh and Chattisgarh</td>
+												  
+												</tr>
+												
+												<tr>
+												  <th scope="row">5</th>
+												  <td>SOUTHERN</td>
+												  <td>Andhra Pradesh and Karnataka</td>
+												  
+												</tr>
+												
+												<tr>
+												  <th scope="row">6</th>
+												  <td>SOUTHERN</td>
+												  <td>Kerala and Tamil Nadu</td>
+												  
+												</tr>
+												
+												<tr>
+												  <th scope="row">7</th>
+												  <td>EASTERN</td>
+												  <td>West Bengal, Orissa and North Eastern</td>
+												  
+												</tr>
+												
+												<tr>
+												  <th scope="row">8</th>
+												  <td>EASTERN</td>
+												  <td>Bihar and Jharkand</td>
+												  
+												</tr>
+												
+												<tr>
+												  <th scope="row">9</th>
+												  <td>APS</td>
+												  <td>Army Postal Service</td>
+												  
+												</tr>
+											  </tbody>
+											</table>
+											
+											<hr class="my-4">
+											
+											<table class="table table-sm table-hover">
+											  <thead class="thead-dark">
+												<tr>
+												  <th scope="col">First 2 Digits of PIN</th>
+												  <th scope="col">Circle</th>
+												  
+												  
+												</tr>
+											  </thead>
+											  <tbody>
+												<tr>
+												  <th scope="row">11</th>
+												  <td>Delhi</td>
+												  
+												  
+												</tr>
+												<tr>
+												  <th scope="row">12 and 13</th>
+												  <td>Haryana</td>
+												  
+												  
+												</tr>
+												<tr>
+												  <th scope="row">14 to 16</th>
+												  <td>Punjab</td>
+												  
+												</tr>
+												
+												<tr>
+												  <th scope="row">17</th>
+												  <td>Himachal Pradesh</td>
+												  
+												  
+												</tr>
+												
+												<tr>
+												  <th scope="row">18 and 19</th>
+												  <td>Jammu & Kashmir</td>
+												  
+												  
+												</tr>
+												
+												<tr>
+												  <th scope="row">20 to 28</th>
+												  <td>Uttar Pradesh and Uttaranchal</td>
+												  
+												  
+												</tr>
+												
+												<tr>
+												  <th scope="row">30 to 34</th>
+												  <td>Rajasthan</td>
+												  
+												  
+												</tr>
+												
+												<tr>
+												  <th scope="row">36 to 39</th>
+												  <td>Gujarat</td>
+												 
+												  
+												</tr>
+												
+												<tr>
+												  <th scope="row">40 to 44</th>
+												  <td>Maharashtra</td>
+												  
+												  
+												</tr>
+												
+												<tr>
+												  <th scope="row">45 to 49</th>
+												  <td>Madhya Pradesh and Chattisgarh</td>
+												  
+												  
+												</tr>
+												
+												<tr>
+												  <th scope="row">50 to 53</th>
+												  <td>Andhra Pradesh & Telangana</td>
+												  
+												  
+												</tr>
+												
+												<tr>
+												  <th scope="row">56 to 59</th>
+												  <td>Karnataka</td>
+												  
+												  
+												</tr>
+												
+												<tr>
+												  <th scope="row">60 to 64</th>
+												  <td>Tamil Nadu</td>
+												  
+												  
+												</tr>
+												
+												<tr>
+												  <th scope="row">67 to 69</th>
+												  <td>Kerala</td>
+												  
+												  
+												</tr>
+												
+												<tr>
+												  <th scope="row">70 to 74</th>
+												  <td>West Bengal</td>
+												  
+												  
+												</tr>
+												
+												<tr>
+												  <th scope="row">75 to 77</th>
+												  <td>Orissa</td>
+												  
+												  
+												</tr>
+												
+												<tr>
+												  <th scope="row">78</th>
+												  <td>Assam</td>
+												  
+												  
+												</tr>
+												
+												<tr>
+												  <th scope="row">79</th>
+												  <td>North Eastern</td>
+												  
+												  
+												</tr>
+												
+												<tr>
+												  <th scope="row">80 to 85</th>
+												  <td>Bihar and Jharkand</td>
+												  
+												  
+												</tr>
+												
+												<tr>
+												  <th scope="row">90 to 99</th>
+												  <td>Army Postal Service (APS)</td>
+												  
+												  
+												</tr>
+											  </tbody>
+											</table>
+									</div>
+									
+									</div>
+									
+									
+								  </div>
+								</div>
+							
+							</section>
+						
+						
+				
+			
+		</div>	
+			
+			
+		
+		<script src="js/jquery.fullPage.js"></script>
+		<script src="js/ScrollTrigger.js"></script>
+		<script src="js/smooth-scroll.js"></script>
+		<script src="aos/dist/aos.js"></script>
+		<script src="wow/dist/wow.js"></script>
+		<script src="js/jquery-3.3.1.min.js"></script>
+	    <script src="js/bootstrap.min.js"></script>
+	    <script src="js/app.js" type="text/javascript"></script>
+	
+	</body>
+</html>
