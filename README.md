@@ -9,8 +9,7 @@ The software generates a digital address for every valid physical address and co
 ## Code Format
 ![codemodel](https://user-images.githubusercontent.com/28597524/39563464-f0f28324-4ecd-11e8-910b-ffd66822121b.png "Unique Digital Address Generated")
 
-
-Markup : * First 2 characters of code determines the State
-         * Next four characters are the area code, describing a region of roughly 100 x 100 kilometers.
-         * Next four characters are the local code, describing the neighborhood and the building, an area of roughly 14 x 14 meters.
-         * Last 2 characters further improve the precision of the code upto 3x3 meters.
+* First 2 characters of code determines the State
+* Next four characters are the area code, describing a region of roughly 100 x 100 kilometers.
+* Next four characters are the local code, describing the neighborhood and the building, an area of roughly 14 x 14 meters.
+* Last 2 characters further improve the precision of the code upto 3x3 meters.
